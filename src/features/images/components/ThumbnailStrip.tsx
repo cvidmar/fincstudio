@@ -25,11 +25,12 @@ export function ThumbnailStrip() {
             activeId === image.id && 'bg-primary/5 ring-2 ring-primary/60',
           )}
         >
-          <div className="aspect-square w-full bg-black/40">
+          <div className="relative w-full overflow-hidden bg-black/40">
+            <span className="block w-full pb-[100%]" aria-hidden="true" />
             <img
               src={image.url}
               alt={image.name}
-              className="h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
           </div>
